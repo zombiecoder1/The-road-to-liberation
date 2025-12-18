@@ -1,0 +1,51 @@
+{
+  "project": "The Road to Liberation - Local AI Development Platform",
+  "version": "1.0",
+  "generation_time": "2025-12-18 09:44:20",
+  "status": {
+    "platform_initialized": true,
+    "timestamp": "2025-12-18 09:44:17",
+    "ollama_host": "http://localhost:11434",
+    "ollama_installed": true,
+    "ollama_running": true,
+    "ollama_version": "ollama version is 0.13.4",
+    "port_11434_open": true,
+    "check_timestamp": "2025-12-18 09:44:17",
+    "system_resources": {
+      "cpu": {
+        "physical_cores": 2,
+        "logical_cores": 4,
+        "usage_percent": 10.9
+      },
+      "memory": {
+        "total_gb": 15.87,
+        "available_gb": 2.61,
+        "usage_percent": 83.5
+      },
+      "disk": {
+        "total_gb": 97.64,
+        "free_gb": 2.13,
+        "usage_percent": 97.82
+      },
+      "timestamp": "2025-12-18 09:44:18"
+    },
+    "model_list": {
+      "models_found": 2,
+      "models": [
+        {
+          "name": "Unknown",
+          "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+          "size": 4920753328,
+          "modified_at": "2025-12-16T22:10:14.681040+06:00"
+        },
+        {
+          "name": "Unknown",
+          "digest": "3ddd2d3fc8d2b5fe039d18f859271132fd9c7960ef0be1864984442dc2a915d3",
+          "size": 776080839,
+          "modified_at": "2025-12-16T20:44:32.791788+06:00"
+        }
+      ],
+      "timestamp": "2025-12-18 09:44:20"
+    }
+  }
+}

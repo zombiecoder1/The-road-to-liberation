@@ -1,0 +1,71 @@
+{
+  "target_ports": [8080, 11434],
+  "waz_doc_path": "waz_doc.json",
+  "services": {
+    "proxy_service": {
+      "script": "Server/enhanced_proxy_service.py",
+      "port": 8080,
+      "name": "Liberation AI Proxy Service",
+      "description": "Local HTTP proxy service for connecting editors to Ollama"
+    }
+  },
+  "environment_variables": {
+    "OLLAMA_HOST": "http://localhost:11434",
+    "LIBERATION_AI_LOCAL_ONLY": "true",
+    "LIBERATION_AI_NO_DATA_COLLECTION": "true"
+  },
+  "cleanup_on_startup": true,
+  "monitor_waz_doc": true,
+  "cloud_handshake_management": {
+    "enabled": true,
+    "redirect_to_local": true,
+    "blocked_external_domains": [
+      "*.alibaba.com",
+      "*.aliyun.com",
+      "*.qoder.ai",
+      "*.qoder.sh",
+      "8.212.*",
+      "139.196.*",
+      "cursor.sh",
+      "openai.com",
+      "anthropic.com",
+      "hwsdigitalbd.com",
+      "exchange.xinewallet.com",
+      "center.qoder.sh",
+      "openapi.qoder.sh",
+      "qts1.qoder.sh",
+      "qts2.qoder.sh",
+      "repo2.qoder.sh",
+      "api2.qoder.sh",
+      "marketplace.qoder.sh",
+      "amazonaws.com",
+      "aws.amazon.com"
+    ]
+  },
+  "challenge_based_tests": {
+    "local_startup_fluency": {
+      "enabled": true,
+      "timeout": 30
+    },
+    "port_conflict_resolution": {
+      "enabled": true,
+      "test_port": 8080
+    },
+    "environment_variable_access": {
+      "enabled": true,
+      "required_vars": ["OLLAMA_HOST"]
+    },
+    "service_startup_sequence": {
+      "enabled": true,
+      "services_to_test": ["proxy_service"]
+    },
+    "cloud_local_switching_stability": {
+      "enabled": true,
+      "test_duration": 60
+    },
+    "waz_doc_change_reaction": {
+      "enabled": true,
+      "monitor_interval": 5
+    }
+  }
+}

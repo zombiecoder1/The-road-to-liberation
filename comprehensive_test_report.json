@@ -1,0 +1,76 @@
+{
+  "test_suite_name": "Universal Launcher Stability Check",
+  "timestamp": "2025-12-18T11:07:10.505234",
+  "environment_details": {
+    "os": "nt",
+    "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "launcher_version": "1.0",
+    "working_directory": "D:\\2024\\adapter\\The road to liberation"
+  },
+  "test_cases": [
+    {
+      "test_name": "Local Startup Fluency",
+      "status": "FAILED",
+      "duration": 0.0,
+      "details": "Some services failed to start",
+      "service_health": [
+        {
+          "service": "proxy_service",
+          "health": {
+            "status": "STOPPED",
+            "pid": 9544,
+            "exit_code": 2
+          }
+        }
+      ]
+    },
+    {
+      "test_name": "Port Conflict Resolution",
+      "status": "PASSED",
+      "duration": 0.04479813575744629,
+      "details": "Killed processes on ports: []",
+      "killed_process_details": {}
+    },
+    {
+      "test_name": "Environment Variable Access",
+      "status": "PASSED",
+      "duration": 0.0,
+      "details": "Environment variables set successfully",
+      "missing_required_vars": [],
+      "total_vars_set": 112
+    },
+    {
+      "test_name": "Service Startup Sequence",
+      "status": "FAILED",
+      "duration": 3.005023717880249,
+      "details": "Services started: ['proxy_service']",
+      "service_statuses": {
+        "proxy_service": {
+          "status": "FAILED",
+          "error": "C:\\Users\\sahon\\AppData\\Local\\Programs\\Python\\Python311\\python.exe: can't open file 'D:\\\\2024\\\\adapter\\\\The road to liberation\\\\Server\\\\Server\\\\enhanced_proxy_service.py': [Errno 2] No such file or directory\r\n",
+          "pid": 1980
+        }
+      }
+    },
+    {
+      "test_name": "Cloud/Local Switching Stability",
+      "status": "SUCCESS",
+      "duration": 0.0,
+      "details": "Redirected 0 cloud connections to local",
+      "redirected_connections": 0
+    },
+    {
+      "test_name": "Waz-Doc Change Reaction",
+      "status": "PASSED",
+      "duration": 0.0,
+      "details": "Waz-Doc file is being monitored for changes",
+      "waz_doc_status": {
+        "status": "MONITORING",
+        "file": "waz_doc.json",
+        "last_modified": "2025-12-18T10:28:23.308431",
+        "message": "Waz-Doc file is being monitored for changes"
+      }
+    }
+  ],
+  "overall_status": "PARTIAL"
+}

@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "timestamp": "2025-12-18T10:00:00Z",
+  "services": {
+    "proxy_service": {
+      "name": "Liberation AI Proxy Service",
+      "description": "Local HTTP proxy service for connecting editors to Ollama",
+      "port": 8080,
+      "status": "configured"
+    }
+  },
+  "environment": {
+    "OLLAMA_HOST": "http://localhost:11434",
+    "LIBERATION_AI_LOCAL_ONLY": "true",
+    "LIBERATION_AI_NO_DATA_COLLECTION": "true"
+  },
+  "monitoring": {
+    "status": "active",
+    "start_time": "2025-12-18T10:00:00Z",
+    "last_update": "2025-12-18T10:00:00Z"
+  },
+  "security": {
+    "local_only": true,
+    "no_external_access": true,
+    "no_data_collection": true,
+    "blocked_domains": [
+      "*.alibaba.com",
+      "*.aliyun.com",
+      "*.qoder.ai",
+      "8.212.*",
+      "139.196.*"
+    ]
+  }
+}
